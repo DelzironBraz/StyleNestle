@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <header className='fixed w-full z-10'>
             <section>
-                <div className='flex flex-row justify-between p-5 md:px-32 px-5 bg-PrimaryColor shadow-[rgba(0,0,0,0.24)0px 3px 8px]'>
+                <div className='flex flex-row justify-between p-5 md:px-32 px-5 bg-PrimaryColor shadow-md'>
                     <div>
                         <Link to="home">
                             <h1 className='text-2xl font-semibold text-ExtraDarkColor cursor-pointer'>StyleNestle</h1>
