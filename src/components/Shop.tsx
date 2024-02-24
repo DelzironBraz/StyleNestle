@@ -3,15 +3,15 @@ import { getProductsByCategory } from "../utils/fetchFromApi"
 
 import ProductCard from "./ProductCard"
 import Slider from "react-slick";
+import { Product } from "../interface/Product";
 
 const Shop = () => {
-    const { isLoading, isError, error, data } = useQuery(['products'], () => (
+    const { data } = useQuery(['products'], () => (
         getProductsByCategory("women's clothing")
     ));
 
     const settings = {
         infinite: true,
-        lazyLoad: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -54,7 +54,7 @@ const Shop = () => {
 
                 <div className="mt-8">
                     <Slider {...settings}>
-                        {data.map((product) => (
+                        {data.map((product: Product) => (
                             <ProductCard
                                 key={product.id}
                                 id={product.id}
