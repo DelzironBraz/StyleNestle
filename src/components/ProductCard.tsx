@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa"
 const ProductCard = ({ id, image, title, price }) => {
     return (
         <div key={id} className="h-[370px] 2xl:h-[420px] w-[300px] text-black rounded-xl mb-2 cursor-pointer shadow-[rgba(_0,_0,_0,_.24)_0px_3px_8px]">
-            <div>
+            <div className="px-5">
                 <img src={image} alt={title} width={400} className="h-56 2xl:h-64 rounded-t-xl w-full" />
             </div>
 
