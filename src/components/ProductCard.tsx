@@ -1,8 +1,9 @@
 import { FaStar } from "react-icons/fa"
+import { Product } from "../interface/Product";
 
-const ProductCard = ({ id, image, title, price }) => {
+const ProductCard = ({ id, image, title, price }: Product) => {
     return (
-        <div key={id} className="h-[370px] 2xl:h-[420px] w-[300px] text-black rounded-xl mb-2 cursor-pointer shadow-[rgba(_0,_0,_0,_.24)_0px_3px_8px]">
+        <div key={id} className="h-[370px] 2xl:h-[420px] w-[300px] text-black rounded-xl mb-2 cursor-pointer shadow-[rgba(_0,_0,_0,_.24)_0px_3px_8px] bg-white">
             <div className="px-5">
                 <img src={image} alt={title} width={400} className="h-56 2xl:h-64 rounded-t-xl w-full" />
             </div>

@@ -1,17 +1,17 @@
-import { useQuery } from "react-query"
-import { getAllProducts } from "../utils/fetchFromApi"
-import ProductCard from "./ProductCard"
+import { useQuery } from "react-query";
+import { getProductsByCategory } from "../utils/fetchFromApi";
 import { Product } from "../interface/Product";
+import ProductCard from "./ProductCard";
 
-const Features = () => {
+const Products = () => {
     const { data } = useQuery(['products'], () => (
-        getAllProducts()
+        getProductsByCategory("men's clothing")
     ));
 
     if (data) {
         return (
-            <section id="features" className="min-h-screen flex flex-col items-center justify-center pt-24">
-                <h1 className="font-semibold text-4xl text-center text-ExtraDarkColor">Exclusive Products</h1>
+            <section id="products" className="min-h-screen flex flex-col items-center justify-center pt-24">
+                <h1 className="font-semibold text-4xl text-center text-ExtraDarkColor">New Arrivals</h1>
 
                 <div className="flex flex-wrap justify-center items-center gap-5 pt-8 w-3/4">
                     {data.map((product: Product) => (
@@ -29,4 +29,4 @@ const Features = () => {
     }
 }
 
-export default Features
+export default Products
