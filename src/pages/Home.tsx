@@ -1,4 +1,5 @@
 import Collections from "../components/Collections";
+import Features from "../components/Features";
 import Hero from "../components/Hero"
 import Shop from "../components/Shop";
 
@@ -8,6 +9,7 @@ const Home = () => {
             <Hero />
             <Shop />
             <Collections />
+            <Features />
         </main>
     )
 }
