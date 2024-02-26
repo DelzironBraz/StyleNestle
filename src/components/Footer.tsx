@@ -45,6 +45,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div >
+                <p className="text-center py-4">@copyright design create by <span className="text-black">Champion programmers</span>! All rights reserved</p>
+            </div>
         </footer>
     )
 }
